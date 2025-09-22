@@ -1,0 +1,91 @@
+.section-skills-edu {
+  background: #0a0f1c; /* tono oscuro */
+  color: #e0e0e0;
+  padding: 4rem 2rem;
+}
+
+.section-skills-edu h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #4fc3f7; /* azul cian */
+  margin-bottom: 2rem;
+}
+
+.skills-edu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Subtítulos de cada columna */
+.skills-edu-container h3 {
+  color: #00e676; /* verde neón */
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #00e676;
+  padding-bottom: 0.5rem;
+}
+
+.skills-edu-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-edu-container li {
+  background: #1b2333;
+  margin-bottom: 0.8rem;
+  padding: 0.8rem 1rem;
+  border-left: 4px solid #4fc3f7;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.4);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.skills-edu-container li:hover {
+  background: #263043;
+  transform: translateY(-4px);
+}
+.skills .skill {
+  margin-bottom: 1.2rem;
+}
+
+.skill-name {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.level {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  padding: 2px 8px;
+  border-radius: 12px;
+  color: #fff;
+}
+
+/* Colores del badge de nivel */
+.level.basic { background: #d39845; }
+.level.intermediate { background: #3f8499; }
+.level.advanced { background: #408040; }
+
+/* Barra de progreso */
+.skill-bar {
+  background: #2c2c2c;
+  border-radius: 10px;
+  height: 14px;
+  overflow: hidden;
+}
+.skill-bar .fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.8s ease-in-out;
+}
+.skill-bar.basic .fill { background: #f0ad4e; }
+.skill-bar.intermediate .fill { background: #5bc0de; }
+.skill-bar.advanced .fill { background: #5cb85c; }

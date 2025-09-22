@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carlos Ledesma | Portafolio</title>
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/skills.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- ===== HEADER / NAV ===== -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">Carlos Ledesma</div>
+        <ul class="nav-links">
+          <li><a href="#about">Sobre mí</a></li>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ===== HERO / PRESENTACIÓN ===== -->
+      <section id="about" class="section-about">
+        <div class="about-content">
+          <img
+            src="assets/Profile imagen.png"
+            alt="Foto de Carlos Ledesma"
+            class="profile-pic"
+          />
+
+          <div class="about-text">
+            <h1>¡Hola, soy <span class="highlight">Carlos Ledesma</span>!</h1>
+            <h2 class="tagline">Desarrollador de Software & UX Enthusiast</h2>
+
+            <p>
+              Tecnólogo en Desarrollo de Software con enfoque en
+              <strong>diseño UX/UI</strong> y experiencia en
+              <strong>proyectos IoT</strong>.  
+              Me apasiona transformar ideas en interfaces claras,
+              accesibles y funcionales.
+            </p>
+
+            <div class="hero-buttons">
+              <a class="btn-cv" href="assets/Hoja de vida Carlos Ledesma-1.pdf" target="_blank">
+                Descargar CV
+              </a>
+              <a class="btn-contact" href="#contact">
+                Contáctame
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ===== PROYECTOS ===== -->
+      <section id="projects" class="section-projects">
+        <h2>Proyectos Destacados</h2>
+        <div class="projects-grid">
+          <!-- Tarjeta 1 -->
+          <article class="project-card">
+            <img
+              src="assets/img/proyecto-hotel.jpg"
+              alt="Sistema de Reservas"
+              class="project-img"
+            />
+            <div class="project-info">
+              <h3>Sistema de Reservas de Hotel</h3>
+              <p>
+                Aplicación web completa para gestionar habitaciones, usuarios y
+                pagos “falsos”, desarrollada con Node.js, Express y MySQL.
+                Incluye panel de administración y vista para clientes.
+              </p>
+            </div>
+          </article>
+
+          <!-- Tarjeta 2 -->
+          <article class="project-card">
+            <img
+              src="assets/img/acceso.jpg"
+              alt="Control de Acceso IoT"
+              class="project-img"
+            />
+            <div class="project-info">
+              <h3>Control de Acceso IoT</h3>
+              <p>
+                Proyecto de seguridad con Arduino Uno, teclado 4x4 y servomotor.
+                Una interfaz en Python genera un código dinámico cada 4 min y
+                registra los accesos en una base de datos en la nube (Supabase).
+              </p>
+            </div>
+          </article>
+
+          <!-- Tarjeta 3 -->
+          <article class="project-card">
+            <img
+              src="assets/img/intranet-redesign.jpg"
+              alt="Rediseño de Intranet COMPAS"
+              class="project-img"
+            />
+            <div class="project-info">
+              <h3>Rediseño de Intranet – COMPAS</h3>
+              <p>
+                Diseño UX/UI de la intranet corporativa para mejorar la
+                navegación y la experiencia de los colaboradores. Prototipos
+                creados en Figma con enfoque en accesibilidad y usabilidad.
+              </p>
+            </div>
+          </article>
+
+          <!-- Tarjeta 4 -->
+          <article class="project-card">
+            <img
+              src="assets/img/ChatCat"
+              alt="ChatCat – Validador de Frases en Inglés"
+              class="project-img"
+            />
+            <div class="project-info">
+              <h3>ChatCat – Validador de Frases</h3>
+              <p>
+                Aplicación web educativa desarrollada con HTML, CSS y JavaScript
+                que valida oraciones en inglés del verbo <em>to be</em>, mostrando
+                correcciones y retroalimentación inmediata para el aprendizaje.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section> 
+      <!-- ===== FORMACIÓN & SKILLS ===== -->
+      <section id="skills-edu" class="section-skills-edu">
+        <h2>Formación & Skills</h2>
+
+        <div class="skills-edu-container">
+          <!-- Columna de Formación -->
+          <div class="education">
+            <h3>Formación</h3>
+            <ul>
+              <li>Tecnólogo en Desarrollo de Software – 2021 – 2025</li>
+              <li>Ingeniería de Sistemas – En curso (inicio 2021)</li>
+              <li>Prácticas universitarias en COMPAS – 2024 – 2025</li>
+              <li>Autodidacta en UX/UI Design (Figma, Adobe XD)</li>
+            </ul>
+          </div>
+
+        <!-- Columna de Skills -->
+            <div class="skills">
+            <h3>Skills</h3>
+
+            <div class="skill">
+                <span class="skill-name">JavaScript (ES6+), Node.js, Express</span>
+                <span class="level advanced">Avanzado</span>
+                <div class="skill-bar advanced">
+                <div class="fill" style="width: 65%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <span class="skill-name">HTML5, CSS3, TailwindCSS</span>
+                <span class="level advanced">Avanzado</span>
+                <div class="skill-bar advanced">
+                <div class="fill" style="width: 70%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <span class="skill-name">MySQL, Supabase</span>
+                <span class="level basic">Básico</span>
+                <div class="skill-bar basic">
+                <div class="fill" style="width: 40%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <span class="skill-name">Java</span>
+                <span class="level basic">Básico</span>
+                <div class="skill-bar basic">
+                <div class="fill" style="width: 40%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <span class="skill-name">Arduino & electrónica básica</span>
+                <span class="level intermediate">Intermedio</span>
+                <div class="skill-bar intermediate">
+                <div class="fill" style="width: 60%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <span class="skill-name">Diseño UX/UI (Figma, Adobe XD)</span>
+                <span class="level advanced">Avanzado</span>
+                <div class="skill-bar advanced">
+                <div class="fill" style="width: 74%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <span class="skill-name">Git & GitHub</span>
+                <span class="level intermediate">Intermedio</span>
+                <div class="skill-bar intermediate">
+                <div class="fill" style="width: 58%"></div>
+                </div>
+            </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACTO ===== -->
+      <section id="contact" class="section-contact">
+        <h2>Contacto</h2>
+        <form class="contact-form">
+          <input type="text" name="name" placeholder="Tu nombre" required />
+          <input type="email" name="email" placeholder="Tu correo" required />
+          <textarea
+            name="message"
+            placeholder="Escribe tu mensaje"
+            required
+          ></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/tu-perfil" target="_blank"
+            >LinkedIn</a
+          >
+          <a href="https://github.com/tu-usuario" target="_blank">GitHub</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <p>&copy; 2025 Carlos Ledesma. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

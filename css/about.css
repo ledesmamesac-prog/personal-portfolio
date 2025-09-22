@@ -1,0 +1,83 @@
+.section-about {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1000px;
+  gap: 2rem;
+}
+
+.profile-pic {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #00d8ff;
+  box-shadow: 0 0 20px rgba(0, 216, 255, 0.5);
+}
+
+.about-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-text .highlight {
+  color: #00d8ff;
+}
+
+.tagline {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #aee7ff;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-cv,
+.btn-contact {
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-cv {
+  background: #00d8ff;
+  color: #0f2027;
+}
+
+.btn-cv:hover {
+  background: #12bfea;
+  transform: translateY(-2px);
+}
+
+.btn-contact {
+  background: transparent;
+  border: 2px solid #00d8ff;
+  color: #00d8ff;
+}
+
+.btn-contact:hover {
+  background: #00d8ff;
+  color: #0f2027;
+  transform: translateY(-2px);
+}

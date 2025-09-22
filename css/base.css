@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg: #0d1117;         /* fondo general tipo terminal */
+  --color-section: #161b22;    /* bloques/secciones */
+  --color-text: #c9d1d9;       /* texto claro */
+  --color-primary: #58a6ff;    /* azul brillante */
+  --color-accent: #3fb950;     /* verde neón */
+  --color-highlight: #f78166;  /* detalles */
+  --font-main: 'Fira Code', monospace, 'Segoe UI', sans-serif;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-main);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+a:hover {
+  color: var(--color-accent);
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+}
