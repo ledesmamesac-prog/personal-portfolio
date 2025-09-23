@@ -45,4 +45,18 @@
   color: var(--color-accent);
   margin-bottom: 0.5rem;
 }
+.btn-demo {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background: #4fc3f7;
+  color: #0a0f1c;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.btn-demo:hover {
+  background: #00e676;
+}
 
