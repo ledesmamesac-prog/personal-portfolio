@@ -40,7 +40,7 @@
     });
 
     // Grow ring on hoverable elements
-    const hoverables = 'a, button, [role="button"], .project-item, .chip';
+    const hoverables = 'a, button, [role="button"], .project-item, .chip, .modal-close';
     document.querySelectorAll(hoverables).forEach(el => {
       el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
       el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
@@ -189,6 +189,45 @@
           themeBtn.disabled = false;
         }, 240);
       });
+    });
+  }
+
+  // ---- VISOR PDF MODAL ----
+  const cvBtn = document.getElementById('cvBtn');
+  const cvModal = document.getElementById('cvModal');
+  const closeCvBtn = document.getElementById('closeCvBtn');
+
+  if (cvBtn && cvModal && closeCvBtn) {
+    // Abrir visor
+    cvBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      cvModal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Evita scroll de fondo
+      cvModal.setAttribute('aria-hidden', 'false');
+    });
+
+    // Función para cerrar
+    const closeModal = () => {
+      cvModal.classList.remove('active');
+      document.body.style.overflow = '';
+      cvModal.setAttribute('aria-hidden', 'true');
+    };
+
+    // Botón cerrar
+    closeCvBtn.addEventListener('click', closeModal);
+
+    // Clic en el área oscura fuera de la caja
+    cvModal.addEventListener('click', (e) => {
+      if (e.target === cvModal) {
+        closeModal();
+      }
+    });
+
+    // Tecla ESC para cerrar
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && cvModal.classList.contains('active')) {
+        closeModal();
+      }
     });
   }
 

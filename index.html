@@ -16,9 +16,9 @@
     rel="stylesheet" />
   <!-- Anti-flash: apply saved theme before first paint -->
   <script>
-    (function(){
+    (function () {
       var t = localStorage.getItem('cl-theme');
-      if(t) document.documentElement.setAttribute('data-theme', t);
+      if (t) document.documentElement.setAttribute('data-theme', t);
     })();
   </script>
 </head>
@@ -57,13 +57,13 @@
           <span class="hero-label">Desarrollador de Software / UX</span>
           <h1 class="hero-name">Carlos<br>Ledesma</h1>
           <p class="hero-bio">
-            Tecnólogo en Desarrollo de Software. Me interesa el punto donde la lógica
-            y el diseño convergen — construyendo interfaces que tienen sentido tanto
-            para las personas como para las máquinas.
+            Desarrollador de software enfocado en crear experiencias digitales fluidas y escalables.
+            Combino pensamiento analítico y diseño centrado en el usuario para construir
+            soluciones que equilibran un alto rendimiento con una estética impecable.
           </p>
           <div class="hero-actions">
-            <a href="assets/Hoja de vida Carlos Ledesma-1.pdf" target="_blank" class="btn btn--primary" id="cvBtn">
-              Descargar CV
+            <a href="assets/CV_Carlos_Ledesma.pdf" class="btn btn--primary" id="cvBtn">
+              Ver CV
             </a>
             <a href="#contact" class="btn btn--ghost" id="contactBtn">
               Hablemos
@@ -88,9 +88,35 @@
 
       <ul class="project-list">
 
-        <li class="project-item reveal">
+        <li class="project-item reveal reveal">
           <div class="project-meta">
             <span class="project-number">01</span>
+            <div class="project-tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">Dart</span>
+              <span class="tag">Cloudflare</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">My Horario U</h3>
+            <p class="project-desc">
+              Aplicación móvil para estudiantes de Android orientada a la gestión académica.
+              Integra un entorno para organizar citas, gestionar horarios semanales y un sistema social.
+            </p>
+            <a href="https://myhorariou.app/" target="_blank" rel="noopener noreferrer" class="project-link"
+              id="MyHorarioULink">
+              Ver proyecto →
+            </a>
+          </div>
+          <div class="project-image-preview">
+            <img src="assets/MyHorarioU.png" alt="My Horario U Flutter App"
+              onerror="this.src='assets/Profile imagen.png'" />
+          </div>
+        </li>
+
+        <li class="project-item reveal-delay-1">
+          <div class="project-meta">
+            <span class="project-number">02</span>
             <div class="project-tags">
               <span class="tag">Node.js</span>
               <span class="tag">Express</span>
@@ -109,26 +135,6 @@
           </div>
         </li>
 
-        <li class="project-item reveal reveal-delay-1">
-          <div class="project-meta">
-            <span class="project-number">02</span>
-            <div class="project-tags">
-              <span class="tag">Arduino</span>
-              <span class="tag">Python</span>
-              <span class="tag">Supabase</span>
-            </div>
-          </div>
-          <div class="project-body">
-            <h3 class="project-name">Control de Acceso IoT</h3>
-            <p class="project-desc">
-              Sistema de seguridad con Arduino Uno, teclado 4×4 y servomotor.
-              Código dinámico cada 4 min con registro en la nube.
-            </p>
-          </div>
-          <div class="project-image-preview">
-            <img src="assets/control de acceso.png" alt="Control de Acceso IoT" />
-          </div>
-        </li>
 
         <li class="project-item reveal reveal-delay-2">
           <div class="project-meta">
@@ -140,7 +146,7 @@
             </div>
           </div>
           <div class="project-body">
-            <h3 class="project-name">Rediseño Intranet — COMPAS</h3>
+            <h3 class="project-name">Rediseño Intranet</h3>
             <p class="project-desc">
               Rediseño de intranet corporativa con foco en accesibilidad y navegación.
               Prototipos en Figma con pruebas de usabilidad.
@@ -150,32 +156,6 @@
             <img src="assets/rediseno-intranet.png" alt="Rediseño Intranet COMPAS" />
           </div>
         </li>
-
-        <li class="project-item reveal reveal-delay-3">
-          <div class="project-meta">
-            <span class="project-number">04</span>
-            <div class="project-tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
-            </div>
-          </div>
-          <div class="project-body">
-            <h3 class="project-name">ChatCat — Validador de Frases</h3>
-            <p class="project-desc">
-              App educativa que valida oraciones en inglés del verbo <em>to be</em>,
-              con correcciones y retroalimentación en tiempo real.
-            </p>
-            <a href="https://ledesmamesac-prog.github.io/chatcat-to-be/" target="_blank" rel="noopener noreferrer"
-              class="project-link" id="chatcatLink">
-              Ver proyecto →
-            </a>
-          </div>
-          <div class="project-image-preview">
-            <img src="assets/ChatCat.jpeg" alt="ChatCat" />
-          </div>
-        </li>
-
       </ul>
     </section>
 
@@ -197,6 +177,8 @@
             <span class="chip chip--strong">Express</span>
             <span class="chip chip--strong">HTML5 / CSS3</span>
             <span class="chip chip--mid">MySQL</span>
+            <span class="chip chip--mid">Flutter</span>
+            <span class="chip chip--mid">Dart</span>
             <span class="chip chip--mid">Supabase</span>
             <span class="chip chip--mid">Arduino C</span>
             <span class="chip chip--mid">Python</span>
@@ -210,10 +192,9 @@
           <div class="chip-group">
             <span class="chip chip--strong">Figma</span>
             <span class="chip chip--strong">Git / GitHub</span>
+            <span class="chip chip--strong">VS Code</span>
+            <span class="chip chip--mid">Cloudflare</span>
             <span class="chip chip--mid">Adobe XD</span>
-            <span class="chip chip--mid">VS Code</span>
-            <span class="chip chip--lite">Postman</span>
-            <span class="chip chip--lite">Cloudflare</span>
           </div>
         </div>
 
@@ -236,7 +217,7 @@
             <li class="edu-item">
               <span class="edu-year">2024–2025</span>
               <div>
-                <strong>Prácticas en COMPAS</strong>
+                <strong>Prácticas academico-laborales</strong>
               </div>
             </li>
             <li class="edu-item">
@@ -244,6 +225,19 @@
               <div>
                 <strong>UX/UI Design</strong>
                 <span class="edu-status">Autodidacta</span>
+              </div>
+            <li class="edu-item">
+              <span class="edu-year">—</span>
+              <div>
+                <strong>Desarrollo Mobile (Flutter)</strong>
+                <span class="edu-status">Autodidacta</span>
+              </div>
+            </li>
+            <li class="edu-item">
+              <span class="edu-year">—</span>
+              <div>
+                <strong>Backend & Cloud Services</strong>
+                <span class="edu-status">Práctica continua</span>
               </div>
             </li>
           </ul>
@@ -307,25 +301,52 @@
 
   <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
-    <p>© 2025 Carlos Ledesma — Medellín, Colombia</p>
+    <p>© 2025 Carlos Ledesma — Cartagena, Colombia</p>
     <p class="footer-status"><span class="status-dot"></span>Disponible para proyectos</p>
   </footer>
 
   <!-- Botón flotante: toggle de tema -->
   <button class="theme-toggle" id="themeBtn" aria-label="Cambiar a modo claro">
     <!-- Sol: se muestra en modo oscuro (cambia a claro) -->
-    <svg class="theme-icon theme-icon--sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <circle cx="12" cy="12" r="5"/>
-      <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-      <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+    <svg class="theme-icon theme-icon--sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="5" />
+      <line x1="12" y1="1" x2="12" y2="3" />
+      <line x1="12" y1="21" x2="12" y2="23" />
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+      <line x1="1" y1="12" x2="3" y2="12" />
+      <line x1="21" y1="12" x2="23" y2="12" />
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
     </svg>
     <!-- Luna: se muestra en modo claro (cambia a oscuro) -->
-    <svg class="theme-icon theme-icon--moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    <svg class="theme-icon theme-icon--moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
     </svg>
   </button>
+
+  <!-- Modal visor de PDF -->
+  <div class="modal-overlay" id="cvModal" aria-hidden="true" role="dialog">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title">Mi Hoja de Vida</h3>
+        <button class="modal-close" id="closeCvBtn" aria-label="Cerrar visor">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <iframe src="assets/CV_Carlos_Ledesma.pdf" width="100%" height="100%" style="border: none;"></iframe>
+      </div>
+    </div>
+  </div>
 
   <script src="Script.js" defer></script>
 
