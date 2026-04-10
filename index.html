@@ -1,259 +1,334 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carlos Ledesma | Portafolio</title>
+<html lang="es" data-theme="dark">
 
-    <!-- CSS principal -->
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/about.css" />
-    <link rel="stylesheet" href="css/projects.css" />
-    <link rel="stylesheet" href="css/skills.css" />
-    <link rel="stylesheet" href="css/contact.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Carlos Ledesma — Desarrollador de Software y UX Designer en Medellín. Proyectos de aplicaciones web, IoT y diseño de interfaces." />
+  <title>Carlos Ledesma — Desarrollador de Software</title>
 
-  <body>
-    <!-- ===== HEADER / NAV ===== -->
-    <header>
-      <nav class="navbar">
-        <div class="logo">Carlos Ledesma</div>
-        <ul class="nav-links">
-          <li><a href="#about">Sobre mí</a></li>
-          <li><a href="#projects">Proyectos</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contacto</a></li>
-        </ul>
-      </nav>
-    </header>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+    rel="stylesheet" />
+  <!-- Anti-flash: apply saved theme before first paint -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('cl-theme');
+      if(t) document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
 
-    <main>
-      <!-- ===== HERO / PRESENTACIÓN ===== -->
-      <section id="about" class="section-about">
-        <div class="about-content">
-          <img
-            src="assets/Profile imagen.png"
-            alt="Foto de Carlos Ledesma"
-            class="profile-pic"
-          />
+<body>
 
-          <div class="about-text">
-            <h1>¡Hola, soy <span class="highlight">Carlos Ledesma</span>!</h1>
-            <h2 class="tagline">Desarrollador de Software & UX Enthusiast</h2>
+  <!-- Cursor personalizado -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
 
-            <p>
-              Tecnólogo en Desarrollo de Software con enfoque en
-              <strong>diseño UX/UI</strong> y experiencia en
-              <strong>proyectos IoT</strong>.  
-              Me apasiona transformar ideas en interfaces claras,
-              accesibles y funcionales.
+  <!-- ===== NAVEGACIÓN ===== -->
+  <header class="site-header">
+    <nav class="nav">
+      <a href="#" class="nav-logo" id="logoLink">CL<span class="nav-logo-dot">.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">Sobre mí</a></li>
+        <li><a href="#projects" class="nav-link">Proyectos</a></li>
+        <li><a href="#skills" class="nav-link">Stack</a></li>
+        <li><a href="#contact" class="nav-link">Contacto</a></li>
+      </ul>
+      <button class="nav-menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section id="about" class="hero">
+      <div class="hero-index dm-mono">— 001</div>
+
+      <div class="hero-inner">
+        <div class="hero-text-block">
+          <span class="hero-label">Desarrollador de Software / UX</span>
+          <h1 class="hero-name">Carlos<br>Ledesma</h1>
+          <p class="hero-bio">
+            Tecnólogo en Desarrollo de Software. Me interesa el punto donde la lógica
+            y el diseño convergen — construyendo interfaces que tienen sentido tanto
+            para las personas como para las máquinas.
+          </p>
+          <div class="hero-actions">
+            <a href="assets/Hoja de vida Carlos Ledesma-1.pdf" target="_blank" class="btn btn--primary" id="cvBtn">
+              Descargar CV
+            </a>
+            <a href="#contact" class="btn btn--ghost" id="contactBtn">
+              Hablemos
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll-hint">
+        <span>scroll</span>
+        <span class="scroll-line"></span>
+      </div>
+    </section>
+
+
+    <!-- ===== PROYECTOS ===== -->
+    <section id="projects" class="section projects-section">
+      <div class="section-header reveal">
+        <span class="section-index">— 002</span>
+        <h2 class="section-title">Proyectos</h2>
+      </div>
+
+      <ul class="project-list">
+
+        <li class="project-item reveal">
+          <div class="project-meta">
+            <span class="project-number">01</span>
+            <div class="project-tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">Express</span>
+              <span class="tag">MySQL</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Sistema de Reservas de Hotel</h3>
+            <p class="project-desc">
+              Aplicación web completa para gestionar habitaciones, usuarios y pagos.
+              Panel de administración con vistas diferenciadas por rol.
             </p>
+          </div>
+          <div class="project-image-preview">
+            <img src="assets/reservas-hoteleras.png" alt="Sistema de Reservas de Hotel" />
+          </div>
+        </li>
 
-            <div class="hero-buttons">
-              <a class="btn-cv" href="assets/Hoja de vida Carlos Ledesma-1.pdf" target="_blank">
-                Descargar CV
-              </a>
-              <a class="btn-contact" href="#contact">
-                Contáctame
-              </a>
+        <li class="project-item reveal reveal-delay-1">
+          <div class="project-meta">
+            <span class="project-number">02</span>
+            <div class="project-tags">
+              <span class="tag">Arduino</span>
+              <span class="tag">Python</span>
+              <span class="tag">Supabase</span>
             </div>
           </div>
-        </div>
-      </section>
-
-
-      <!-- ===== PROYECTOS ===== -->
-      <section id="projects" class="section-projects">
-        <h2>Proyectos Destacados</h2>
-        <div class="projects-grid">
-          <!-- Tarjeta 1 -->
-          <article class="project-card">
-            <img
-              src="assets/reservas-hoteleras.png"
-              alt="Sistema de Reservas"
-              class="project-img"
-            />
-            <div class="project-info">
-              <h3>Sistema de Reservas de Hotel</h3>
-              <p>
-                Aplicación web completa para gestionar habitaciones, usuarios y
-                pagos “falsos”, desarrollada con Node.js, Express y MySQL.
-                Incluye panel de administración y vista para clientes.
-              </p>
-            </div>
-          </article>
-
-          <!-- Tarjeta 2 -->
-          <article class="project-card">
-            <img
-              src="assets/control de acceso.png"
-              alt="Control de Acceso IoT"
-              class="project-img"
-            />
-            <div class="project-info">
-              <h3>Control de Acceso IoT</h3>
-              <p>
-                Proyecto de seguridad con Arduino Uno, teclado 4x4 y servomotor.
-                Una interfaz en Python genera un código dinámico cada 4 min y
-                registra los accesos en una base de datos en la nube (Supabase).
-              </p>
-            </div>
-          </article>
-
-          <!-- Tarjeta 3 -->
-          <article class="project-card">
-            <img
-              src="assets/rediseno-intranet.png"
-              alt="Rediseño de Intranet COMPAS"
-              class="project-img"
-            />
-            <div class="project-info">
-              <h3>Rediseño de Intranet – COMPAS</h3>
-              <p>
-                Diseño UX/UI de la intranet corporativa para mejorar la
-                navegación y la experiencia de los colaboradores. Prototipos
-                creados en Figma con enfoque en accesibilidad y usabilidad.
-              </p>
-            </div>
-          </article>
-
-          <!-- Tarjeta 4 -->
-          <article class="project-card">
-            <img
-              src="assets/ChatCat.jpeg"
-              alt="ChatCat – Validador de Frases en Inglés"
-              class="project-img"
-            />
-            <div class="project-info">
-              <h3>ChatCat – Validador de Frases</h3>
-              <p>
-                Aplicación web educativa desarrollada con HTML, CSS y JavaScript
-                que valida oraciones en inglés del verbo <em>to be</em>, mostrando
-                correcciones y retroalimentación inmediata para el aprendizaje.
-              </p>
-              <a
-                href="https://ledesmamesac-prog.github.io/chatcat-to-be/"
-                class="btn-demo"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Probar demo</a>
-            </div>
-          </article>
-
-        </div>
-      </section> 
-      <!-- ===== FORMACIÓN & SKILLS ===== -->
-      <section id="skills-edu" class="section-skills-edu">
-        <h2>Formación & Skills</h2>
-
-        <div class="skills-edu-container">
-          <!-- Columna de Formación -->
-          <div class="education">
-            <h3>Formación</h3>
-            <ul>
-              <li>Tecnólogo en Desarrollo de Software – 2021 – 2025</li>
-              <li>Ingeniería de Sistemas – En curso (inicio 2021)</li>
-              <li>Prácticas universitarias en COMPAS – 2024 – 2025</li>
-              <li>Autodidacta en UX/UI Design (Figma, Adobe XD)</li>
-            </ul>
+          <div class="project-body">
+            <h3 class="project-name">Control de Acceso IoT</h3>
+            <p class="project-desc">
+              Sistema de seguridad con Arduino Uno, teclado 4×4 y servomotor.
+              Código dinámico cada 4 min con registro en la nube.
+            </p>
           </div>
+          <div class="project-image-preview">
+            <img src="assets/control de acceso.png" alt="Control de Acceso IoT" />
+          </div>
+        </li>
 
-        <!-- Columna de Skills -->
-            <div class="skills">
-            <h3>Skills</h3>
+        <li class="project-item reveal reveal-delay-2">
+          <div class="project-meta">
+            <span class="project-number">03</span>
+            <div class="project-tags">
+              <span class="tag">Figma</span>
+              <span class="tag">UX/UI</span>
+              <span class="tag">Adobe XD</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Rediseño Intranet — COMPAS</h3>
+            <p class="project-desc">
+              Rediseño de intranet corporativa con foco en accesibilidad y navegación.
+              Prototipos en Figma con pruebas de usabilidad.
+            </p>
+          </div>
+          <div class="project-image-preview">
+            <img src="assets/rediseno-intranet.png" alt="Rediseño Intranet COMPAS" />
+          </div>
+        </li>
 
-            <div class="skill">
-                <span class="skill-name">JavaScript (ES6+), Node.js, Express</span>
-                <span class="level advanced">Avanzado</span>
-                <div class="skill-bar advanced">
-                <div class="fill" style="width: 65%"></div>
-                </div>
+        <li class="project-item reveal reveal-delay-3">
+          <div class="project-meta">
+            <span class="project-number">04</span>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
             </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">ChatCat — Validador de Frases</h3>
+            <p class="project-desc">
+              App educativa que valida oraciones en inglés del verbo <em>to be</em>,
+              con correcciones y retroalimentación en tiempo real.
+            </p>
+            <a href="https://ledesmamesac-prog.github.io/chatcat-to-be/" target="_blank" rel="noopener noreferrer"
+              class="project-link" id="chatcatLink">
+              Ver proyecto →
+            </a>
+          </div>
+          <div class="project-image-preview">
+            <img src="assets/ChatCat.jpeg" alt="ChatCat" />
+          </div>
+        </li>
 
-            <div class="skill">
-                <span class="skill-name">HTML5, CSS3, TailwindCSS</span>
-                <span class="level advanced">Avanzado</span>
-                <div class="skill-bar advanced">
-                <div class="fill" style="width: 70%"></div>
-                </div>
-            </div>
+      </ul>
+    </section>
 
-            <div class="skill">
-                <span class="skill-name">MySQL, Supabase</span>
-                <span class="level basic">Básico</span>
-                <div class="skill-bar basic">
-                <div class="fill" style="width: 40%"></div>
-                </div>
-            </div>
 
-            <div class="skill">
-                <span class="skill-name">Java</span>
-                <span class="level basic">Básico</span>
-                <div class="skill-bar basic">
-                <div class="fill" style="width: 40%"></div>
-                </div>
-            </div>
+    <!-- ===== STACK & FORMACIÓN ===== -->
+    <section id="skills" class="stack-section">
+      <div class="section-header reveal">
+        <span class="section-index">— 003</span>
+        <h2 class="section-title">Stack &amp; Formación</h2>
+      </div>
 
-            <div class="skill">
-                <span class="skill-name">Arduino & electrónica básica</span>
-                <span class="level intermediate">Intermedio</span>
-                <div class="skill-bar intermediate">
-                <div class="fill" style="width: 60%"></div>
-                </div>
-            </div>
+      <div class="stack-grid">
 
-            <div class="skill">
-                <span class="skill-name">Diseño UX/UI (Figma, Adobe XD)</span>
-                <span class="level advanced">Avanzado</span>
-                <div class="skill-bar advanced">
-                <div class="fill" style="width: 74%"></div>
-                </div>
-            </div>
-
-            <div class="skill">
-                <span class="skill-name">Git & GitHub</span>
-                <span class="level intermediate">Intermedio</span>
-                <div class="skill-bar intermediate">
-                <div class="fill" style="width: 58%"></div>
-                </div>
-            </div>
-            </div>
+        <div class="stack-col reveal">
+          <h3 class="stack-col-title">Tecnologías</h3>
+          <div class="chip-group">
+            <span class="chip chip--strong">JavaScript ES6+</span>
+            <span class="chip chip--strong">Node.js</span>
+            <span class="chip chip--strong">Express</span>
+            <span class="chip chip--strong">HTML5 / CSS3</span>
+            <span class="chip chip--mid">MySQL</span>
+            <span class="chip chip--mid">Supabase</span>
+            <span class="chip chip--mid">Arduino C</span>
+            <span class="chip chip--mid">Python</span>
+            <span class="chip chip--lite">Java</span>
+            <span class="chip chip--lite">TailwindCSS</span>
+          </div>
         </div>
-      </section>
 
-      <!-- ===== CONTACTO ===== -->
-      <section id="contact" class="section-contact">
-        <h2>Contacto</h2>
-        <form class="contact-form" action="https://formspree.io/f/manpydnk" method="POST">
-          <input type="text" name="name" placeholder="Tu nombre" required />
-          <input type="email" name="email" placeholder="Tu correo" required />
-          <textarea
-            name="message"
-            placeholder="Escribe tu mensaje"
-            required
-          ></textarea>
-          <button type="submit">Enviar</button>
+        <div class="stack-col reveal reveal-delay-1">
+          <h3 class="stack-col-title">Herramientas</h3>
+          <div class="chip-group">
+            <span class="chip chip--strong">Figma</span>
+            <span class="chip chip--strong">Git / GitHub</span>
+            <span class="chip chip--mid">Adobe XD</span>
+            <span class="chip chip--mid">VS Code</span>
+            <span class="chip chip--lite">Postman</span>
+            <span class="chip chip--lite">Cloudflare</span>
+          </div>
+        </div>
+
+        <div class="stack-col reveal reveal-delay-2">
+          <h3 class="stack-col-title">Formación</h3>
+          <ul class="education-list">
+            <li class="edu-item">
+              <span class="edu-year">2021–2025</span>
+              <div>
+                <strong>Tecnólogo en Desarrollo de Software</strong>
+              </div>
+            </li>
+            <li class="edu-item">
+              <span class="edu-year">2021 –</span>
+              <div>
+                <strong>Ingeniería de Sistemas</strong>
+                <span class="edu-status">En curso</span>
+              </div>
+            </li>
+            <li class="edu-item">
+              <span class="edu-year">2024–2025</span>
+              <div>
+                <strong>Prácticas en COMPAS</strong>
+              </div>
+            </li>
+            <li class="edu-item">
+              <span class="edu-year">—</span>
+              <div>
+                <strong>UX/UI Design</strong>
+                <span class="edu-status">Autodidacta</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ===== CONTACTO ===== -->
+    <section id="contact" class="section contact-section">
+      <div class="section-header reveal">
+        <span class="section-index">— 004</span>
+        <h2 class="section-title">Contacto</h2>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-info reveal">
+          <p class="contact-tagline">¿Tienes un proyecto en mente? Conversemos.</p>
+          <ul class="contact-links">
+            <li>
+              <span>LinkedIn</span>
+              <a href="https://www.linkedin.com/in/carlos-ledesma-dev" target="_blank" rel="noopener noreferrer"
+                id="linkedinLink">
+                carlos-ledesma-dev →
+              </a>
+            </li>
+            <li>
+              <span>GitHub</span>
+              <a href="https://github.com/ledesmamesac-prog" target="_blank" rel="noopener noreferrer" id="githubLink">
+                ledesmamesac-prog →
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form reveal reveal-delay-1" id="contactForm" action="https://formspree.io/f/manpydnk"
+          method="POST">
+          <div class="form-field">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-field">
+            <label for="email">Correo</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="tu@correo.com" required />
+          </div>
+          <div class="form-field">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="5" placeholder="Cuéntame sobre tu proyecto..."
+              required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary" id="submitBtn">Enviar mensaje</button>
+          <p class="form-success" id="formSuccess">¡Mensaje enviado! Te responderé pronto.</p>
         </form>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/carlos-ledesma-dev" target="_blank"
-            >LinkedIn</a
-          >
-          <a href="https://github.com/ledesmamesac-prog" target="_blank">GitHub</a>
-        </div>
-      </section>
-    </main>
 
-    <!-- ===== FOOTER ===== -->
-    <footer>
-      <p>&copy; 2025 Carlos Ledesma. Todos los derechos reservados.</p>
-    </footer>
+      </div>
+    </section>
 
-    <script src="script.js" defer></script>
-  </body>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <p>© 2025 Carlos Ledesma — Medellín, Colombia</p>
+    <p class="footer-status"><span class="status-dot"></span>Disponible para proyectos</p>
+  </footer>
+
+  <!-- Botón flotante: toggle de tema -->
+  <button class="theme-toggle" id="themeBtn" aria-label="Cambiar a modo claro">
+    <!-- Sol: se muestra en modo oscuro (cambia a claro) -->
+    <svg class="theme-icon theme-icon--sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="5"/>
+      <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+      <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+    </svg>
+    <!-- Luna: se muestra en modo claro (cambia a oscuro) -->
+    <svg class="theme-icon theme-icon--moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </svg>
+  </button>
+
+  <script src="Script.js" defer></script>
+
+</body>
+
 </html>
